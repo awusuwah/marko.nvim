@@ -1,0 +1,5 @@
+# Editor artifacts
+*.swp
+*.swp
+*~
+.DS_Store
