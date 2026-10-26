@@ -40,3 +40,18 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     })
   end,
 })
+
+-- Automatically create missing directories when writing buffers
+vim.api.nvim_create_autocmd("BufWritePre", {
+  callback = function(args)
+    local file = vim.api.nvim_buf_get_name(args.buf)
+    if file == "" then
+      return
+    end
+
+    local dir = vim.fn.fnamemodify(file, ":p:h")
+    if vim.fn.isdirectory(dir) == 0 then
+      vim.fn.mkdir(dir, "p")
+    end
+  end,
+})
