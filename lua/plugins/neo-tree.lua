@@ -48,6 +48,8 @@ return {
 
       mappings = {
         ["<space>"] = "none",
+        ["l"] = "open",
+        ["h"] = "close_node",
       },
     },
   },
