@@ -40,5 +40,3 @@ map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 -- Files
 map("n", "<leader>fn", "<cmd>enew<CR>", { desc = "New file" })
 
--- Git
-map("n", "<leader>gg", "<cmd>lazygit<CR>", { desc = "LazyGit" })
